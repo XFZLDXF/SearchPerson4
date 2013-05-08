@@ -12,13 +12,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    
+    
     return YES;
 }
 
+///////////////////使用消息中心进行网络检测/////////////////////
+/*
+-(void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability *reach = [note object];
+    if ([reach isReachable]) {
+        debugLog(@"Notification Says Reachable");
+    }
+    else{
+        debugLog(@"Notification Says Unreachable");
+    }
+}
+ */
+
+//////////////////////////////////////////////////////////
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
